@@ -9,6 +9,6 @@ RUN jupyter labextension install -y @jupyterlab/git
 COPY entrypoint.jupyterlab.sh /scripts/entrypoint.sh
 RUN chmod +x /scripts/entrypoint.sh
 
-EXPOSE 8000
-CMD /scripts/entrypoint.sh
+EXPOSE 8888
 
+CMD /scripts/entrypoint.sh
