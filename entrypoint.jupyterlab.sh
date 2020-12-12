@@ -1,3 +1,4 @@
+echo "Run Jupyter Lab"
 echo "Password: $PASSWORD"
 echo "Github Repo: $GH_REPO"
 
