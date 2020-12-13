@@ -15,5 +15,11 @@ then
   echo "Open jupyter-lab"
   jupyter-lab --ip=0.0.0.0 --port=8000 --notebook-dir=/workspace/$REPO_NAME --LabApp.token="$PASSWORD" --allow-root
 else
+  if [ -z "$PASSWORD" ]
+  then
+    AUTH=none
+  else
+    AUTH=password
+  fi
   /usr/code-server-3.6.0-linux-amd64/bin/code-server /workspace/$REPO_NAME --bind-addr=0.0.0.0:8000 --auth $AUTH
 fi
