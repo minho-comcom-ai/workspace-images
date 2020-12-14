@@ -1,3 +1,4 @@
+# FROM ./Dockerfile.vscode
 FROM minhocomcomai/vscode
 
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -

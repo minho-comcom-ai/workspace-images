@@ -1,0 +1,9 @@
+# FROM ./Dockerfile.jupyterlab
+FROM minhocomcomai/jupyterlab
+
+COPY --from=gcr.io/google-containers/pause:3.2 /pause /pause
+COPY --from=tsl0922/ttyd /usr/bin/ttyd /ttyd
+COPY entrypoint.all.sh /scripts/entrypoint.sh
+RUN chmod +x /scripts/entrypoint.sh
+
+EXPOSE 8000 8010 8020
